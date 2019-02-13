@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 8133771530431652156}
   m_Layer: 0
   m_Name: Matinhos_01
-  m_TagString: Untagged
+  m_TagString: Construcao
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -6,76 +6,109 @@ public class eventosDoMouse : MonoBehaviour
 {     
 
     public bool BaseCorreta;
+    public GameObject objetoAcertado;
+    public GameObject itemCriado;
 
     public string tagAlvos;   
     public Camera cam;
     public Vector2 mousePos;
-
     RaycastHit2D hit;
 
-    public GameObject itemCriado;
+    
     int custoAtual;
 
     // Update is called once per frame
     void Update() {
 
-        mirandoComMouse();
+        //mirandoComMouse();
+        guardaItem();
 
-        if (itemCriado){
+        if (objetoAcertado){
 
-            if (Input.GetButtonUp("Fire1")){
+            if (Input.GetButtonDown("Fire1")){
 
-                if (BaseCorreta){
+                switch(objetoAcertado.tag){
 
-                    Transform destino = hit.transform.parent.parent.transform;
-                    
+                    case "Coletavel":
+                        itemColetado(objetoAcertado);
+                        break;
 
-                    //Debug.Log(hit.transform.parent.parent.name);                
-                    itemCriado.transform.position = destino.position;
-                    itemCriado.transform.rotation = destino.rotation;
-                    itemCriado.transform.parent = destino;
-                    GetComponent<contadorDeEnergia>()._energia -= custoAtual;
-                    itemCriado = null;
+                    default:
+                        break;
 
-                    Destroy(hit.transform.parent.gameObject);                    
+                }
 
+            } else if (Input.GetButtonUp("Fire1")){
+
+                if (objetoAcertado.CompareTag("Construcao")){
+
+                    instalaNovoItem();
 
                 } else {
 
                     Destroy(itemCriado);
+
                 }
 
-                
+            }
 
-            } else {
+        } else if (Input.GetButtonUp("Fire1")){
+            
+            if (itemCriado){
 
-                itemCriado.transform.position = mousePos;                
+                Destroy(itemCriado);
 
             }
+
+        }
+
+        if (itemCriado){
+
+            itemCriado.transform.position = mousePos;
 
         }
         
     }
 
-    public void mirandoComMouse(){
+    public void instalaNovoItem(){
 
-        mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
+        Transform destino = hit.transform.parent.parent.transform;
 
-        hit = Physics2D.Raycast (mousePos,Vector2.zero, Mathf.Infinity);
+        itemCriado.transform.position = destino.position;
+        itemCriado.transform.rotation = destino.rotation;
+        itemCriado.transform.parent = destino;
+        itemCriado.GetComponent<geradorDeEnergia>().enabled = true;
+        itemCriado = null;
+
+        GetComponent<contadorDeEnergia>()._energia -= custoAtual;
+
+        Destroy(hit.transform.parent.gameObject);
+        Debug.Log("Destruido: " + hit.transform.parent.name);
+
+    }
+
+    public void guardaItem(){
+
+        mousePos = cam.ScreenToWorldPoint(Input.mousePosition);   
+
+        hit = Physics2D.Raycast (mousePos, Vector2.zero, Mathf.Infinity);
 
         if (hit){
 
+            objetoAcertado = hit.transform.gameObject;
 
-            if (hit.transform.parent.CompareTag(tagAlvos)){
+        } else {
 
-                BaseCorreta = true;
-
-            } else {
-
-                BaseCorreta = false;
-
-            }
+            objetoAcertado = null;
         }
+    }
+
+    public void itemColetado(GameObject item){
+
+        //Adiciona valor de item Coletado
+
+        //Destroi objeto
+        Destroy(item.gameObject);
 
     }
 

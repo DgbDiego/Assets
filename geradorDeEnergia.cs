@@ -5,14 +5,27 @@ using UnityEngine;
 public class geradorDeEnergia : MonoBehaviour
 {
 
+    public PolygonCollider2D[] col;
+
     public int tempoDeProducao = 30;
     public int quantidadeDeProducao = 10;
+
+    public int custoDeConstrucao;
     float intTimer;
+
+
+
 
     
     // Start is called before the first frame update
     void Start()
     {
+
+        foreach(PolygonCollider2D off in col){
+
+            off.enabled = true;
+
+        }
 
         reiniciaTimer(tempoDeProducao);
         
