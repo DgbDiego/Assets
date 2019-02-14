@@ -10,6 +10,7 @@ public class contadorDeEnergia : MonoBehaviour
     
     public GameObject[] itens;
     public int _energia;
+    int _intEnergia;
 
     public float _frequenciaEnergia;
 
@@ -28,19 +29,18 @@ public class contadorDeEnergia : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+
         _energiaDial.text = _energia.ToString();
 
-        if (intTimer < Time.time){
+        if (_intEnergia != _energia || intTimer < Time.time){
 
-            intTimer = Time.time + _frequenciaEnergia;
-
-            _energia ++;
-
+            _intEnergia = _energia;
             revisaItens();
 
+            intTimer = Time.time + _frequenciaEnergia;
+            
 
-
-        }       
+        }     
         
     }
 

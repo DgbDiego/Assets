@@ -9,12 +9,10 @@ public class geradorDeEnergia : MonoBehaviour
 
     public int tempoDeProducao = 30;
     public int quantidadeDeProducao = 10;
-
     public int custoDeConstrucao;
+    public float variacaoDePosicao = 0.04f;
+    public GameObject objeto;
     float intTimer;
-
-
-
 
     
     // Start is called before the first frame update
@@ -37,6 +35,7 @@ public class geradorDeEnergia : MonoBehaviour
 
         if (intTimer < Time.time){
 
+            novaUnidade(quantidadeDeProducao);
             reiniciaTimer(tempoDeProducao);
 
         }
@@ -49,14 +48,19 @@ public class geradorDeEnergia : MonoBehaviour
 
     }
 
-    public void novaUnidade(){
+    public void novaUnidade(int quant){
 
-        for (int i = 0; i < quantidadeDeProducao; i++) {
+        for (int i = 0; i < quant; i++) {
+
+            //Randomiza posição
+            Vector3 novaPos =  new Vector3(Random.Range(-variacaoDePosicao, variacaoDePosicao),
+                                            Random.Range(-variacaoDePosicao, variacaoDePosicao),
+                                            Random.Range(-variacaoDePosicao, variacaoDePosicao));
 
             //Instancia nova unidade de energia
+            Instantiate(objeto, transform.position + novaPos, Quaternion.identity);
             
         }
-
 
     }
 

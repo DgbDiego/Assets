@@ -14,6 +14,8 @@ public class eventosDoMouse : MonoBehaviour
     public Vector2 mousePos;
     RaycastHit2D hit;
 
+    public contadorDeEnergia count;
+
     
     int custoAtual;
 
@@ -30,7 +32,7 @@ public class eventosDoMouse : MonoBehaviour
                 switch(objetoAcertado.tag){
 
                     case "Coletavel":
-                        itemColetado(objetoAcertado);
+                        count._energia += objetoAcertado.GetComponent<itemColetavel>().itemUsado();
                         break;
 
                     default:

@@ -141,8 +141,10 @@ MonoBehaviour:
   col:
   - {fileID: 639451787664681627}
   tempoDeProducao: 30
-  quantidadeDeProducao: 10
+  quantidadeDeProducao: 1
   custoDeConstrucao: 10
+  variacaoDePosicao: 0.4
+  objeto: {fileID: 2856720609182448039, guid: ffacebe6091c1f543b45671af0bb31ab, type: 3}
 --- !u!1 &816580857383095444
 GameObject:
   m_ObjectHideFlags: 0
