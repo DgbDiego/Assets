@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6081832648284685416}
   - component: {fileID: 977284439236734497}
-  - component: {fileID: 8654430912052879425}
+  - component: {fileID: 3189087477070411510}
   m_Layer: 0
   m_Name: Matinhos_03
   m_TagString: Construcao
@@ -80,7 +80,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!60 &8654430912052879425
+--- !u!60 &3189087477070411510
 PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

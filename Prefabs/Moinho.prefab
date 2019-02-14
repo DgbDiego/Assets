@@ -140,11 +140,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   col:
   - {fileID: 639451787664681627}
-  tempoDeProducao: 30
-  quantidadeDeProducao: 1
+  tempoDeProducao: 20
+  quantidadeDeProducao: 3
   custoDeConstrucao: 10
-  variacaoDePosicao: 0.4
-  objeto: {fileID: 2856720609182448039, guid: ffacebe6091c1f543b45671af0bb31ab, type: 3}
+  variacaoDePosicao: 0.5
+  objeto:
+  - {fileID: 7736856945935193941, guid: bd4d80ab1f9bc7846b49a843d5f96ae9, type: 3}
+  - {fileID: 7736856945935193941, guid: bd4d80ab1f9bc7846b49a843d5f96ae9, type: 3}
+  - {fileID: 7736856945935193941, guid: bd4d80ab1f9bc7846b49a843d5f96ae9, type: 3}
+  - {fileID: 7736856945935193941, guid: bd4d80ab1f9bc7846b49a843d5f96ae9, type: 3}
+  - {fileID: 7736856945935193941, guid: bd4d80ab1f9bc7846b49a843d5f96ae9, type: 3}
+  - {fileID: 3860506135656804274, guid: b41669cf20e30234ab8fa49015b9716b, type: 3}
+  - {fileID: 3860506135656804274, guid: b41669cf20e30234ab8fa49015b9716b, type: 3}
+  - {fileID: 3860506135656804274, guid: b41669cf20e30234ab8fa49015b9716b, type: 3}
+  - {fileID: 7471526665958476279, guid: fe129608a5ae67945981cbd9aff72324, type: 3}
 --- !u!1 &816580857383095444
 GameObject:
   m_ObjectHideFlags: 0

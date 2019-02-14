@@ -11,7 +11,7 @@ public class geradorDeEnergia : MonoBehaviour
     public int quantidadeDeProducao = 10;
     public int custoDeConstrucao;
     public float variacaoDePosicao = 0.04f;
-    public GameObject objeto;
+    public GameObject[] objeto;
     float intTimer;
 
     
@@ -58,7 +58,7 @@ public class geradorDeEnergia : MonoBehaviour
                                             Random.Range(-variacaoDePosicao, variacaoDePosicao));
 
             //Instancia nova unidade de energia
-            Instantiate(objeto, transform.position + novaPos, Quaternion.identity);
+            Instantiate(objeto[Random.Range(0, objeto.Length)], transform.position + novaPos, Quaternion.identity);
             
         }
 
