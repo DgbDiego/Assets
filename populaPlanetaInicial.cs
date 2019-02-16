@@ -19,14 +19,7 @@ public class populaPlanetaInicial : MonoBehaviour
             GameObject novoEnfeite = Instantiate (_objetosIniciais[sel], destino.transform.position, destino.transform.rotation) as GameObject;
             novoEnfeite.transform.parent = destino.transform;
 
-
         }
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
         
     }
 }

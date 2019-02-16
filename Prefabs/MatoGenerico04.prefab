@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4770186340536535839}
   - component: {fileID: 3257098831391454262}
-  - component: {fileID: 5978147265169590001}
+  - component: {fileID: 1901806994937662800}
   m_Layer: 0
   m_Name: Matinhos_04
   m_TagString: Construcao
@@ -80,8 +80,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!60 &5978147265169590001
-PolygonCollider2D:
+--- !u!61 &1901806994937662800
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -103,34 +103,9 @@ PolygonCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 0.290625, y: -0.14375}
-      - {x: 0.40312502, y: -0.0375}
-      - {x: 0.421875, y: 0}
-      - {x: 0.421875, y: 0.06875}
-      - {x: 0.378125, y: 0.081250004}
-      - {x: 0.27812502, y: 0.1375}
-      - {x: 0.234375, y: 0.1375}
-      - {x: 0.128125, y: 0.15}
-      - {x: 0.103125, y: 0.16250001}
-      - {x: -0.015625, y: 0.16250001}
-      - {x: -0.096875004, y: 0.13125001}
-      - {x: -0.171875, y: 0.16250001}
-      - {x: -0.284375, y: 0.16250001}
-      - {x: -0.290625, y: 0.15}
-      - {x: -0.290625, y: 0.125}
-      - {x: -0.390625, y: 0.056250002}
-      - {x: -0.421875, y: -0.01875}
-      - {x: -0.421875, y: -0.13125001}
-      - {x: -0.353125, y: -0.15625}
-      - {x: -0.265625, y: -0.112500004}
-      - {x: -0.253125, y: -0.14375}
-      - {x: -0.24062501, y: -0.16250001}
-      - {x: -0.140625, y: -0.16250001}
-      - {x: -0.028125001, y: -0.11875}
-      - {x: -0.009375, y: -0.16250001}
-      - {x: 0.140625, y: -0.16250001}
+  serializedVersion: 2
+  m_Size: {x: 0.84375, y: 0.325}
+  m_EdgeRadius: 0
 --- !u!1 &7232538578643618668
 GameObject:
   m_ObjectHideFlags: 0

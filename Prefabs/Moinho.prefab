@@ -140,7 +140,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   col:
   - {fileID: 639451787664681627}
-  tempoDeProducao: 20
+  tempoDeProducao: 15
   quantidadeDeProducao: 3
   custoDeConstrucao: 10
   variacaoDePosicao: 0.5
