@@ -14,14 +14,10 @@ public class contadorDeEnergia : MonoBehaviour
 
     public float _frequenciaEnergia;
 
-    float intTimer;
-
-
     // Start is called before the first frame update
     void Start()
     {
 
-        intTimer = Time.time + _frequenciaEnergia;
         revisaItens();
         
     }
@@ -32,12 +28,11 @@ public class contadorDeEnergia : MonoBehaviour
 
         _energiaDial.text = _energia.ToString();
 
-        if (_intEnergia != _energia || intTimer < Time.time){
+        if (_intEnergia != _energia){
 
             _intEnergia = _energia;
             revisaItens();
 
-            intTimer = Time.time + _frequenciaEnergia;
             
 
         }     

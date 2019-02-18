@@ -20,7 +20,7 @@ public class eventosDoMouse : MonoBehaviour
     int custoAtual;
 
     // Update is called once per frame
-    void Update() {
+    void FixedUpdate() {
 
         //mirandoComMouse();
         guardaItem();
