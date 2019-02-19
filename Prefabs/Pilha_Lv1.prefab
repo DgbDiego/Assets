@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6846379928569516027}
-  - component: {fileID: 6145574481126275989}
+  - component: {fileID: 934283433}
   m_Layer: 0
   m_Name: Pilha_Lv1
   m_TagString: Construcao
@@ -32,34 +32,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6145574481126275989
+--- !u!114 &934283433
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1172727765276153508}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 83bb9fdfbdce1b8448fbe139faa28acf, type: 3}
+  m_Script: {fileID: 11500000, guid: 2b66dc6fb98d80e44abb9bcde8f50ba5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  col:
-  - {fileID: 1424209164700474829}
-  tempoDeProducao: 15
-  quantidadeDeProducao: 3
-  custoDeConstrucao: 10
-  variacaoDePosicao: 0.5
-  objeto:
-  - {fileID: 7736856945935193941, guid: bd4d80ab1f9bc7846b49a843d5f96ae9, type: 3}
-  - {fileID: 7736856945935193941, guid: bd4d80ab1f9bc7846b49a843d5f96ae9, type: 3}
-  - {fileID: 7736856945935193941, guid: bd4d80ab1f9bc7846b49a843d5f96ae9, type: 3}
-  - {fileID: 7736856945935193941, guid: bd4d80ab1f9bc7846b49a843d5f96ae9, type: 3}
-  - {fileID: 7736856945935193941, guid: bd4d80ab1f9bc7846b49a843d5f96ae9, type: 3}
-  - {fileID: 3860506135656804274, guid: b41669cf20e30234ab8fa49015b9716b, type: 3}
-  - {fileID: 3860506135656804274, guid: b41669cf20e30234ab8fa49015b9716b, type: 3}
-  - {fileID: 3860506135656804274, guid: b41669cf20e30234ab8fa49015b9716b, type: 3}
-  - {fileID: 7471526665958476279, guid: fe129608a5ae67945981cbd9aff72324, type: 3}
 --- !u!1 &4536694264408415192
 GameObject:
   m_ObjectHideFlags: 0

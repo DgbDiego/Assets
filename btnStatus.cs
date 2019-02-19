@@ -13,7 +13,7 @@ public class btnStatus : MonoBehaviour
     void Start()
     {
 
-        custoDoItem = itemDoBotao.GetComponent<geradorDeEnergia>().custoDeConstrucao;
+        custoDoItem = itemDoBotao.GetComponent<construcao>()._custo;
         transform.GetChild(0).GetComponent<Text>().text = custoDoItem.ToString();
         
     }
